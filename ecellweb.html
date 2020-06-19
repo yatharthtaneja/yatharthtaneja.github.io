@@ -70,6 +70,34 @@
     -moz-box-shadow: 8px 8px 6px -6px #999;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: grey;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 
 
     </style>
@@ -107,15 +135,15 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#Archives" id="navbarDropdown" 
+                <a class="nav-link dropdown-toggle" href="#arch1" id="navbarDropdown" 
                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Archives
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Blogs</a>
-                  <a class="dropdown-item" href="#">Events</a>
+                  <a class="dropdown-item" href="#b1">Blogs</a>
+                  <a class="dropdown-item" href="#e1">Events</a>
                   <!-- <div class="dropdown-divider"></div> -->
-                  <a class="dropdown-item" href="#">Programs</a>
+                  <a class="dropdown-item" href="#p1">Programs</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -213,32 +241,41 @@
     </div>
 
     <!-- archive -->
-    <div style="background-color: #ffffff; padding: 100px 16px;" id="Archives">
+    <div style="background-color: #ffffff; padding: 100px 16px;" id="arch1">
         <h2 style="text-align: center; font-weight: bold; "> ARCHIVE </h2>
         <br>
         <br>
 
 
 
-      <div class="card-group cards">
+      <div class="card-group cards" id="b1">
         <div class="card">
             <img class="card-img" src="1.jpg" alt="Card image cap" style="height: 100%;">
             <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
               <h2 class="card-title" style="font-weight: bold;">BLOGS</h2>
+              <div class="overlay">
+              <h2 class="text " >BLOGS</h2>
+            </div>
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="e1">
             <img class="card-img" src="2.jpg" alt="Card image cap" style="height: 100%;">
             <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
-              <h2 class="card-title" style="font-weight: bold;">BLOGS</h2>
+              <h2 class="card-title " style="font-weight: bold;">EVENTS</h2>
+              <div class="overlay">
+              <h2 class="card-title text " style="font-weight: bold;">EVENTS</h2>
+              </div>
 
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="p1">
             <img class="card-img" src="3.jpg" alt="Card image cap" style="height: 100%;">
             <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
-              <h2 class="card-title" style="font-weight: bold;">BLOGS</h2>
+              <h2 class="card-title" style="font-weight: bold;">PROGRAMS</h2>
+              <div class="overlay">
+                <h2 class="text " >PROGRAMS</h2>
+              </div>
 
             </div>
         </div>
@@ -246,7 +283,14 @@
 
 </div>
 
+<!-- team -->
+<div id="team">
 
+
+
+
+
+</div>
 
 
     <!-- Optional JavaScript -->
