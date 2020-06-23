@@ -525,6 +525,11 @@
 <br>
 <br>
 <div class="d-flex justify-content-center">
+<div id="map" style="width:70%;height:400px;" ></div>
+</div>
+<br>
+<br>
+<div class="d-flex justify-content-center">
 <a href="#home1" class="btn btn-light btn-lg" style="margin: 1px;"><i class="fa fa-arrow-up" style="font-size: 25px; color: black; padding:5px ;"></i>GO TO TOP</a>
 
 
@@ -577,6 +582,24 @@ $(document).on("scroll", function() {
 });
 
 </script>
+
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    var uluru = {lat: 28.582809, lng: 77.2903401};
+
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 4, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+  }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+      </script>
+  
 
 </body>
 </html>
