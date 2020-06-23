@@ -119,8 +119,24 @@
   text-decoration: none;
 }
 
+/* Adhish started from here (baad me hata liyo) 
+*/
+.tag {
+}
 
-    </style>
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+</style>
 
 
   </head>
@@ -196,7 +212,7 @@
     <br>
     <br>
     <div style="text-align: center;">
-        <div ><img src="eye.png" style="height: 70px;">
+        <div class="tag"><img src="eye.png" style="height: 70px;">
             <br> 
              <h2>Vision</h2>
         <p>
@@ -204,8 +220,8 @@
         </p>
         </div>
         <br> 
-            <br>
-        <div ><img src="mission.png" style="height: 70px;">
+        <br>
+        <div class="tag"><img src="mission.png" style="height: 70px;">
             <br>
              <h2>Mission</h2>
             <p>
@@ -215,17 +231,18 @@
     </div>
     <br>
     <br>
-        <div style="text-align: center;" >
+        <div class="tag" style="text-align: center;" >
             <img src="incubation.png" style="height: 70px;">
             <br>
             <h2>IIITD Innovation & Incubation Center</h2>
         <p>
             IIITD Innovation & Incubation Center is actively involved in developing the paradigm of entrepreneurial mindset & environment of ideating, creating and commercializing the ventures aligned to the core theme of incubation center​. for more information visit <a href="https://iiitdic.in/"> iiitdic.in</a>.
         </p>
-        
         </div>
       </div>
+
 <!-- initiatives -->
+
     <div style="background-color: #F1F1F1; padding: 100px 16px;" id="initiatives">
         <h2 style="text-align: center; font-weight: bold;"> INITIATIVES </h2>
         <br>
@@ -483,9 +500,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script>
-
-
 
         $( ".card" ).hover(
         function() {
@@ -494,9 +510,28 @@
         $(this).removeClass('outline');
         }
         );
-        
-        
-        
-        </script>
+             
+    </script>  
+
+<script>
+
+$(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
+  var tags = $(".tag");
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if ($(tag).position().top < pageBottom) {
+      $(tag).addClass("visible");
+    } else {
+      $(tag).removeClass("visible");
+    }
+  }
+});
+
+</script>
+
 </body>
 </html>
