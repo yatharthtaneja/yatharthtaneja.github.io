@@ -135,6 +135,17 @@
   transform: translate(0, 0);
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.row.grid .cell {
+  /* // flex: auto;
+  // flex: 0;
+  // flex: 1; */
+  margin-left: 0;
+}
 
 </style>
 
@@ -247,7 +258,9 @@
         <h2 style="text-align: center; font-weight: bold;"> INITIATIVES </h2>
         <br>
         <br>
-        <div class="card-deck">
+        <div class="container-fluid">
+        <div class="row grid">
+          <div class="col s4 cell">
 
             <div class="card shadow" id="wt">
               <img class="card-img-top" src="WT2.png" alt="Card image cap" >
@@ -263,8 +276,9 @@
                     <br>Wisdom Talks</p>
                     </div>
               </div>
+              </div>
             </div>
-
+            <div class="col s4 cell">
             <div class="card" id="innovate">
               <img class="card-img-top" src="inovate2.png" alt="Card image cap" style="padding-top: 0px;" >
               <div class="card-body" >
@@ -274,6 +288,8 @@
                 </div>
               </div>
             </div>
+            </div>
+            <div class="col s4 cell">
             <div class="card" id="enactus">
               <img class="card-img-top center" src="enactus2.png" alt="Card image cap" >
               <div class="card-body">
@@ -284,6 +300,9 @@
             </div>
             </div>
           </div>
+          </div>
+
+        </div>
     </div>
 
     <!-- archive -->
