@@ -13,6 +13,7 @@
         type = "image/x-icon"> 
     <style>
         html,body{
+          scroll-behavior: smooth;
             margin: 0%;
             padding: 0%;
         }
@@ -29,7 +30,7 @@
 .jumbotron{
         background-image: url(homebg.png) ;
         background-size:cover;
-        padding-top: 17%;
+        padding-top: 13%;
         padding-bottom: 17%;
         border-radius: 0%;
         color: white;
@@ -186,7 +187,7 @@
                 <br>
               <h1 style="font-size: 4vw;font-weight: bold;">THE ENTREPRENEURSHIP CELL</h1>
               <h1 style="font-size: 4vw;font-weight: bold;">IIIT DELHI</h1>
-              <p style="font-size: 2vw;">CREATING JOB CREATORS.</p>
+              <p style="font-size: 2vw;">Teaching Entrepreneurial Thinking.</p>
             </div>
           </div>
 <!-- abut -->
@@ -194,17 +195,20 @@
     <h2 style="text-align: center; font-weight: bold;"> ABOUT US</h2>
     <br>
     <br>
-    <div class="row" style="text-align: center;">
-        <div class="col"><img src="eye.png" style="height: 70px;">
+    <div  style="text-align: center;">
+        <div ><img src="eye.png" style="height: 70px;">
             <br> 
-            <br> <h2>Vision</h2>
+            <h2>Vision</h2>
         <p>
             Turning every idea into a reality.  
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
         </p>
         </div>
-        <div class="col"><img src="mission.png" style="height: 70px;">
+        <br>
+        <br>
+        <div ><img src="mission.png" style="height: 70px;">
             <br>
-            <br> <h2>Mission</h2>
+             <h2>Mission</h2>
             <p>
                 To empower aspiring individuals to make their best work, helping them grow their ideas through various resources and valuable insights from the leaders and professionals of the field and transforming their dreams into a reality.
             </p>
@@ -215,13 +219,15 @@
         <div style="text-align: center;" >
             <img src="incubation.png" style="height: 70px;">
             <br>
-            <br> <h2>IIITD Innovation & Incubation Center</h2>
+             <h2>IIITD Innovation & Incubation Center</h2>
         <p>
             IIITD Innovation & Incubation Center is actively involved in developing the paradigm of entrepreneurial mindset & environment of ideating, creating and commercializing the ventures aligned to the core theme of incubation center​. for more information visit <a href="https://iiitdic.in/"> iiitdic.in</a>.
         </p>
         
         </div>
       </div>
+
+       
 <!-- initiatives -->
     <div style="background-color: #F1F1F1; padding: 100px 16px;" id="initiatives">
         <h2 style="text-align: center; font-weight: bold;"> INITIATIVES </h2>
@@ -475,7 +481,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript">
 
 
 
@@ -486,6 +496,16 @@
         $(this).removeClass('outline');
         }
         );
+
+        // $(document).on('scroll',function(){
+        //   var x=$("div").offset();
+        //   var y=$("div").scrollTop();
+        //   console.log(y)
+        //   if(y>x.top){
+        //     alert(y+" "+x.top);
+           
+        //   }
+        })
         
         
         
