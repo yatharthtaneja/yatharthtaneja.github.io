@@ -146,6 +146,13 @@
   // flex: 1; */
   margin-left: 0;
 }
+[data-toggle="collapse"] .fa:before {   
+  content: "\f077";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f078";
+}
 
 </style>
 
@@ -259,14 +266,15 @@
         <br>
         <br>
         <div class="container-fluid">
-        <div class="row grid">
+          <div id="accordion">
+        <div class="row grid" >
           <div class="col-sm md4 cell">
 
             <div class="card shadow"  data-toggle="collapse" data-target="#C3" id="wt">
               <img class="card-img-top" src="WT2.png" alt="Card image cap" >
               <div class="card-body">
-                <h5 data-toggle="collapse" data-target="#C3" class="card-title">Wisdom Talks</h5>
-                <div class="collapse" id="C3" >
+                <h5  class="card-title">Wisdom Talks<i class="fa " style="float: right; padding: 0%; color: black;"></i></h5>
+                <div class="collapse" id="C3" data-parent="#accordion">
                 <p class="card-text">Weekly talk sessions by Industry Professionals and Entrepreneurs.<br>
 
                     <br>Topics: Investing, Need for innovation, Unexplored areas in innovation, Entrepreneurship in India, etc.
@@ -282,8 +290,8 @@
             <div class="card"  data-toggle="collapse" data-target="#C1" id="innovate">
               <img class="card-img-top" src="inovate2.png" alt="Card image cap" style="padding-top: 0px;" >
               <div class="card-body" >
-                <h5 data-toggle="collapse" data-target="#C1" class="card-title">Innovate Delhi</h5>
-                <div class="collapse" id="C1" >
+                <h5  class="card-title">Innovate Delhi<i class="fa " style="float: right; padding: 0%; color: black;"></i></h5>
+                <div class="collapse" id="C1" data-parent="#accordion" >
                 <p class="card-text">A 6-week long annual bootcamp program by IIIT-Delhi. It is a model for funding early stage startups where we are inviting angel investors and venture capitalists to invest in 10 selected startups.</p>
                 </div>
               </div>
@@ -293,15 +301,15 @@
             <div data-toggle="collapse" data-target="#C2" class="card" id="enactus">
               <img class="card-img-top center" src="enactus2.png" alt="Card image cap" >
               <div class="card-body">
-                <h5 data-toggle="collapse" data-target="#C2" class="card-title">Enactus</h5>
-                <div class="collapse" id="C2" >
+                <h5  class="card-title">Enactus<i class="fa " style="float: right; padding: 0%; color: black;"></i></h5>
+                <div class="collapse" id="C2"  data-parent="#accordion">
                 <p class="card-text">A community of student, academic and business leaders committed to using the power of entrepreneurial action to transform lives and shape a better more sustainable world.</p>
               </div>
             </div>
             </div>
           </div>
           </div>
-
+          </div>
         </div>
     </div>
 
@@ -356,7 +364,8 @@
   <br>
 
   <div class="container-fluid">
-    <div class="row grid">
+    <div id="accordion1">
+    <div class="row grid" >
 
 
   <div class="col-sm md3 cell">
@@ -379,7 +388,7 @@
         <!-- Subtitle -->
         <h5 class="blue-text pb-2"><strong>COORDINATOR</strong></h5>
         <!-- Text -->
-        <div class="collapse" id="T1">
+        <div class="collapse" id="T1" data-parent="#accordion1">
         <p class="card-text" >Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
           laudantium, totam rem aperiam. </p>
     
@@ -415,7 +424,7 @@
           <!-- Subtitle -->
           <h5 class="blue-text pb-2"><strong>COORDINATOR</strong></h5>
           <!-- Text -->
-          <div class="collapse" id="T2">
+          <div class="collapse" id="T2" data-parent="#accordion1">
           <p class="card-text" >Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam. </p>
       
@@ -451,7 +460,7 @@
             <!-- Subtitle -->
             <h5 class="blue-text pb-2"><strong>COORDINATOR</strong></h5>
             <!-- Text -->
-            <div class="collapse" id="T3">
+            <div class="collapse" id="T3" data-parent="#accordion1">
             <p class="card-text" >Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
               laudantium, totam rem aperiam. </p>
         
@@ -487,7 +496,7 @@
               <!-- Subtitle -->
               <h5 class="blue-text pb-2"><strong>COORDINATOR</strong></h5>
               <!-- Text -->
-              <div class="collapse" id="T4">
+              <div class="collapse" id="T4" data-parent="#accordion1">
               <p class="card-text" >Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
                 laudantium, totam rem aperiam. </p>
           
@@ -503,7 +512,7 @@
           </div>
           </div>
 
-    
+    </div>
     </div>
   </div>
 </div>
@@ -538,7 +547,7 @@
 <br>
 <br>
 <div class="d-flex justify-content-center">
-<a href="#home1" class="btn btn-light btn-lg" style="margin: 1px;"><i class="fa fa-arrow-up" style="font-size: 25px; color: black; padding:5px ;"></i>GO TO TOP</a>
+<a href="#home1" class="btn btn-light btn-lg" style="margin: 1px;    position: static;       z-index: 1000000;"><i class="fa fa-arrow-up" style="font-size: 25px; color: black; padding:5px ;"></i>GO TO TOP</a>
 
 
 </div>
@@ -592,6 +601,22 @@ $(document).on("scroll", function() {
 </script>
 
 
+<!-- <script>
+  $(document).ready(function(){
+      // Add minus icon for collapse element which is open by default
+      $(".collapse.show").each(function(){
+        $(this).prev(".card-title").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+      });
+      
+      // Toggle plus minus icon on show hide of collapse element
+      $(".collapse").on('show.bs.collapse', function(){
+        $(this).prev(".card-title").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        console.log("huaa")
+      }).on('hide.bs.collapse', function(){
+        $(this).prev(".card-title").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+      });
+  });
+</script> -->
   
 
 </body>
