@@ -1,9 +1,18 @@
-h1{
+/* h1{
     text-align: center;
     color: black;
-}
+} */
 body{
     margin: 0%;
+}
+.left-text{
+    text-align: left;
+    font-size: 2vw;
+    font-family: cursive;
+    position: relative;
+    top: 120px;
+    right: 60px;
+
 }
 .div1{
     background: linear-gradient(90deg ,white 50%,black 50% );
@@ -17,7 +26,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 50vw;
     padding: 10%;
   }
 
