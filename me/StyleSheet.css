@@ -8,11 +8,12 @@ body{
 }
 .left-text{
     text-align: center;
-    font-size: 10vh;
-    font-family: cursive;
+    font-size: 5vw;
+    font-family: sans-serif;
     position: relative;
-    top: 120px;
-    right: 60px;
+    margin-top: 10%;
+    /* top: 120px;
+    right: 60px; */
 
 }
 .div1{
