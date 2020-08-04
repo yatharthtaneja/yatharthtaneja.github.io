@@ -22,7 +22,7 @@ body{
 .parallax {
     
     background-image: url("./img/backdrown.png");
-    min-height: 500px; 
+    /* min-height: 500px;  */
     
     background-attachment: fixed;
     background-position: center;
