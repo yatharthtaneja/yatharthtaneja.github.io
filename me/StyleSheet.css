@@ -21,9 +21,7 @@ body{
 
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  
 }
 .div1{
   background: linear-gradient(90deg ,white 50%,black 50% );
@@ -40,7 +38,11 @@ body{
   /* min-height: 500px;  */
   
   background-attachment: fixed;
-  background-position: center;
+background-position: bottom;
+  /* background-position-x:center;
+  background-position-y: ; */
+  display: block;
+
   background-repeat: no-repeat;
   background-size: 50vw;
   padding: 16% 0%;
