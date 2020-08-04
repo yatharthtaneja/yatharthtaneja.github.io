@@ -3,178 +3,228 @@
     color: black;
 } */
 body{
-    margin: 0%;
-    color: black;
+  margin: 0%;
+  color: black;
+  font-family: raleway;
 }
 .left-text{
-    text-align: center;
-    font-size: 5vw;
-    font-family: sans-serif;
-    position: relative;
-    margin-top: 10%;
-    /* top: 120px;
-    right: 60px; */
+  text-align: center;
+  font-size: 5vw;
+  font-family: sans-serif;
+  position: relative;
+  margin-top: 10%;
+  /* top: 120px;
+  right: 60px; */
 
 }
 .div1{
-    background: linear-gradient(90deg ,white 50%,black 50% );
+  background: linear-gradient(90deg ,white 50%,black 50% );
 }
 
 .parallax {
-    
-    background-image: url("./img/backdrown.png");
-    /* min-height: 500px;  */
-    
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50vw;
-    padding: 10%;
-  }
-  .right-text{
-    text-align: right;
-    font-size: 2vw;
-    color: aliceblue;
-    /* font-family: cursive; */
-    margin-left: 30%;
-   margin-top: 10%;
-    
+  
+  background-image: url("./img/backdrown.png");
+  /* min-height: 500px;  */
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  padding: 10%;
+}
+.right-text{
+  text-align: right;
+  font-size: 2vw;
+  line-height: 70%;
+  color: aliceblue;
+  /* font-family: cursive; */
+  margin-left: 30%;
+ margin-top: 10%;
+  
 
 }
-  .css-typing p {
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  /* font-size: 14px; */
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 9.1em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 5.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css-typing p:nth-child(4) {
+  width: 10em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
     border-right: .15em solid orange;
-    font-family: "Courier";
-    /* font-size: 14px; */
-    white-space: nowrap;
-    overflow: hidden;
   }
-  .css-typing p:nth-child(1) {
-    width: 9.1em;
-    -webkit-animation: type 2s steps(40, end);
-    animation: type 2s steps(40, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  100% {
+    border: none;
   }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+
+/* About div */
+
+/* @media screen and (max-width: 600px) {
+  .wrap {
+    flex-direction: column;
+   }
+} */
+
+.wrap {
+  display: flex;
+}
+
+
+
+.left {
+  background: black;
+  flex-basis: 50%;
+}
+
+.right {
+  background: white;
+  flex-basis: 50%;
+  height: 100vh; 
+  padding: 10%;
+  overflow: auto;
   
-  .css-typing p:nth-child(2) {
-    width: 11.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(3) {
-    width: 5.5em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  .css-typing p:nth-child(4) {
-    width: 10em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end);
-    animation: type2 2s steps(40, end);
-    -webkit-animation-delay: 6s;
-    animation-delay: 6s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes type {
-    0% {
-      width: 0;
-    }
-    99.9% {
-      border-right: .15em solid orange;
-    }
-    100% {
-      border: none;
-    }
-  }
-  
-  @-webkit-keyframes type {
-    0% {
-      width: 0;
-    }
-    99.9% {
-      border-right: .15em solid orange;
-    }
-    100% {
-      border: none;
-    }
-  }
-  
-  @keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: .15em solid orange;
-    }
-    100% {
-      opacity: 1;
-      border: none;
-    }
-  }
-  
-  @-webkit-keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: .15em solid orange;
-    }
-    100% {
-      opacity: 1;
-      border: none;
-    }
-  }
-  
-  @keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @-webkit-keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-  @-webkit-keyframes blink {
-    50% {
-      border-color: tranparent;
-    }
-  }
+}
+.about-text1{
+
+  text-align: center;
+  font-size: 30%;
+  padding-top: 10%;
+}
+
+.about{
+color: white;
+text-align:center;
+position: relative;
+padding-top: 20%;
+padding:10%, 2%;
+
+font-size: 150%;
+font-family: "Courier";
+font-weight: bold;
+/* padding: 2%; */
+
+}
