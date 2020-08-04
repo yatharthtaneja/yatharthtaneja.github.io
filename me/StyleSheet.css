@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    color: black;
+}
+body{
+    margin: 0%;
+}
+.div1{
+    background: linear-gradient(90deg ,white 50%,black 50% );
+}
+
+.parallax {
+    
+    background-image: url("./img/backdrown.png");
+    min-height: 500px; 
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    padding: 10%;
+  }
+
