@@ -7,6 +7,7 @@
             Yatharth Taneja
         </title>
         <link href="StyleSheet.css" rel="stylesheet">
+        <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,20 +60,39 @@
   <div class="wrap row">
     <div class="left about col-md-6">
    <!-- d-flex justify-content-center -->
+   <div data-aos="fade-right">
    <a>About</a>
-
+</div>
    </div>
    <div class="right col-md-6">
-       <div class="about-text1">
+       <div class="about-text1" data-aos="fade-left">
        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient. Imperdiet nulla malesuada pellentesque elit eget gravida. Tempor orci eu lobortis elementum nibh. Malesuada fames ac turpis egestas sed tempus urna. Augue eget arcu dictum varius duis at consectetur lorem donec. Ultrices eros in cursus turpis massa. Platea dictumst vestibulum rhoncus est pellentesque elits </p>
                <!-- scrollable -->
         </div>
+        <div data-aos="fade-up">
         <img src="img/meinsta.png" style="width:70%;" class="center">
-   </div>
+        </div>
+        <div class="about-text1" >
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis parturient. Imperdiet nulla malesuada pellentesque elit eget gravida. Tempor orci eu lobortis elementum nibh. Malesuada fames ac turpis egestas sed tempus urna. Augue eget arcu dictum varius duis at consectetur lorem donec. Ultrices eros in cursus turpis massa. Platea dictumst vestibulum rhoncus est pellentesque elits </p>
+                    <!-- scrollable -->
+         </div>
+
+         <div>
+            <img src="img/meinsta.png" style="width:70%;" class="center">
+            </div>
+
+    </div>
 </div>
 <script src="./node_modules/rellax/rellax.min.js"></script>
 <script>
   var rellax = new Rellax('.rellax');
 </script>
+<script src="./node_modules/aos/dist/aos.js">
+    
+  </script>
+   <script>
+    AOS.init();
+  </script>
+
     </body>
 </html>
