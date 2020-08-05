@@ -39,15 +39,15 @@ body{
   
   background-image: url("./img/backdrown.png");
   /* min-height: 500px;  */
-  
-  background-attachment: fixed;
-background-position: bottom;
-  /* background-position-x:center;
-  background-position-y: ; */
+  /* max-width: 1500px; */
+  /* background-attachment: fixed; */
+  /* height: auto; */
+  background-position: bottom;
   display: block;
 
   background-repeat: no-repeat;
   background-size: 50vw;
+
   padding: 16% 0%;
 }
 .right-text{
