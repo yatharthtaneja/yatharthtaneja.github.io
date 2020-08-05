@@ -214,6 +214,7 @@ body{
 .left {
   background: black;
   flex-basis: 50%;
+
 }
 
 .right {
@@ -227,7 +228,7 @@ body{
 .about-text1{
 
   text-align: center;
-  font-size: 1vw;
+  font-size: 20px;
   padding: 10%;
   padding-top: 10%;
 }
@@ -236,12 +237,10 @@ body{
 color: white;
 text-align:center;
 position: relative;
-padding-top:20% ;
-/* padding:20%, 2%; */
-
+top: 50%;
 font-size: 4vw;
 font-family: "Courier";
 font-weight: bold;
-/* padding: 2%; */
+padding: 4%;
 
 }
