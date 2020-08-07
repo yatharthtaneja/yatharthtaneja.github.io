@@ -223,7 +223,13 @@ body{
   height: 100vh; 
   /* padding: 10%; */
   overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
   
+}
+
+.right::-webkit-scrollbar{
+  display: none;
 }
 .about-text1{
 
