@@ -1,6 +1,34 @@
-body {
+html,body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    padding-top: 0%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
+.row{
+    display: flex;
+    height: 100vh;
+
+}
+
+.Roblox{
+    padding: 0%;
+    flex: 70%;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+canvas {
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+}
+.Roblox-info{
+    padding-top: 10%;
+    padding-left: 10%;
+    flex: 30%;
+    text-align: center;
+    width: 100%;
+    background-color: #BFE3DD ;
+}

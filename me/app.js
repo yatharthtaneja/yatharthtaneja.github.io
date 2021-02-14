@@ -1,24 +1,29 @@
  
   var scene, camera, renderer , controls;
+  let container;
   init();
   animate();
   function init() {
-    renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(window.innerWidth,window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    document.body.appendChild( renderer.domElement );
-
+  container = document.querySelector(".Roblox");
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xdddddd);
+    scene.background = new THREE.Color(0xBFE3DD);
     
-
-
-    camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-    camera.rotation.y = 45/180*Math.PI;
-    camera.position.x = 800;
-    camera.position.y = 100;
-    camera.position.z = 1000;
+    const fov = 400;
+    const aspect = container.clientWidth / container.clientHeight;
+    const near = 0.1;
+    const far =4000;
+  
+    //Camera setup
+    camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.set(500, 200, 1400);
+    // camera.position.
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+  
+    container.appendChild(renderer.domElement);
     controls = new THREE.OrbitControls(camera , renderer.domElement);
+    // controls.enableZoom = false ;
     //lights 
     hlight = new THREE.AmbientLight (0x3d3d3d,7);
     scene.add(hlight);
@@ -31,19 +36,31 @@
     scene.add(light);
 
     controls.addEventListener('change', renderer);
-    document.body.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
+
     let loader = new THREE.GLTFLoader();
     loader.load('sports.glb', function(gltf){
       build = gltf.scene.children[0];
       build.scale.set(1.5,1.5,1.5);
+  
       scene.add(gltf.scene);
+    //   build.position.set(250,1,1);
       // animate();
     });
   }
 
   function animate() {
     requestAnimationFrame(animate);
+    build.rotation.y += 0.005;
+    var zoom = controls.target.distanceTo( controls.object.position )
+    console.log(zoom);
     renderer.render(scene,camera);
  
   }
-  // init();
+
+  function onWindowResize(){
+      camera.aspect = container.clientWidth/container.clientHeight;
+      camera.updateProjectMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+  }  // init();
+  window.addEventListener("resize", onWindowResize);
