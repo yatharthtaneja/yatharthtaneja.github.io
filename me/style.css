@@ -5,30 +5,106 @@ html,body {
     padding-top: 0%;
     overflow-x: hidden;
     overflow-y: auto;
+    font-family: 'Raleway';font-size: 18px;
   }
+    /* visited link */
+    a:visited {
+        color: white;
+        text-decoration: none;
+      }
+      
+      /* mouse over link */
+      a:hover {
+        color:white;
+        text-decoration: none;
+    
+      }
+      
+      /* selected link */
+      a:active {
+        text-decoration: none;
+        color: white
+      }
 .row{
     display: flex;
     height: 100vh;
 
 }
-
+h1 {
+    font-family: 'Bebas Neue';font-size: 45px;
+}
 .Roblox{
     padding: 0%;
-    flex: 70%;
+    flex: 100%;
     float: left;
     width: 100%;
     height: 100%;
 }
-canvas {
-  /* position: relative; */
-  width: 100%;
-  height: 100%;
-}
 .Roblox-info{
-    padding-top: 10%;
-    padding-left: 10%;
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 8%;
     flex: 30%;
-    text-align: center;
-    width: 100%;
-    background-color: #BFE3DD ;
+    text-align: left;
+    width: 30%;
+    color: #C5C6C8;
+    background: transparent ;
 }
+a:link {
+    color: white;
+    text-decoration: none;
+
+  }
+ 
+  
+.button1 {
+	--width: 150px;
+	--height: 50px;
+	border: 0;
+	position: relative;
+    left: 55%;
+	width: var(--width);
+	height: var(--height);
+	font-size: 1.2rem;
+	font-family: "Bebas Neue";
+    color: #66FCF1 ;
+	font-weight: bold;
+	margin: 1rem;
+	border-radius: 0.5em;
+	cursor: pointer;
+	overflow: hidden;
+	background: #1f2833;
+}
+	/* button:nth-child(1) {
+		background: rgb(255, 223, 208);
+		color: rgb(255, 112, 46);
+	} */
+
+
+	.button1 span {
+		position: relative;
+		z-index: 2;
+		transition: color 200ms ease;
+	}
+	.button1 div {
+		position: absolute;
+		width: calc(3 * var(--width));
+		height: calc(3 * var(--height));
+		left: 0;
+		top: 0;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		background: #66FCF1;
+		clip-path: circle(0% at 50% 50%);
+		transition: clip-path 500ms ease;
+		z-index: 1;
+	}
+	.button1:hover span {
+			color: black;
+		}
+    .button1:hover div {
+			clip-path: circle(100% at 50% 50%);
+		}
+	
+
+
