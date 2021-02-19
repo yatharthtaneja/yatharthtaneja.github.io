@@ -2,10 +2,13 @@
   var scene, camera, renderer , controls;
   var zoom;
   let container;
+  let build;
+ 
   init();
   animate();
   function init() {
-  container = document.querySelector(".Roblox");
+  // container = document.querySelector(".Roblox");
+  container = document.getElementById('Roblox');
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x0B0C10);
     
@@ -24,7 +27,7 @@
   
     container.appendChild(renderer.domElement);
     controls = new THREE.OrbitControls(camera , renderer.domElement);
-    // controls.enableZoom = false ;
+    controls.enableZoom = false ;
     //lights 
     hlight = new THREE.AmbientLight (0x3d3d3d,7);
     scene.add(hlight);
@@ -58,6 +61,7 @@
     var flag  = 1 ;
     if(zoom<=1071){
       $(".Roblox-info").css('opacity',0);
+      // display : none 
       // $(".remove-scroll").remove();
       flag=0;
     }

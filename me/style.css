@@ -1,10 +1,10 @@
 html,body {
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    margin: 0%;
     padding-top: 0%;
     overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-y: hidden; */
     font-family: 'Raleway';font-size: 18px;
   }
     /* visited link */
@@ -31,7 +31,48 @@ html,body {
 
 }
 h1 {
-    font-family: 'Bebas Neue';font-size: 45px;
+    font-family: 'nunito';font-size: 45px;
+}
+.hello{
+color: #1f2833; display: block; 
+padding-left: 10%;
+padding-top: 15%;
+text-align: left; margin: 0%; font-size: 60px;
+position: relative;
+    background: transparent;
+}
+.Name{
+    padding-left:10% ;
+    color: #66FCF1; display: block; text-align: left; margin: 0%; font-size: 100px;
+    position: relative;
+    background: transparent;
+}
+.Rick{
+    height: 1000px; display: block; margin-left: auto; margin-right: auto;
+    position: relative;
+    top: 350px;
+
+}
+.me{
+    padding-left:10.5% ;
+    color:  #C5C6C8; display: block; text-align: left; margin: 0%; 
+    position: relative;
+    background: transparent;
+}
+.scene,
+/* canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+.home{
+    background-color: #0B0C10;
+    background: transparent;
+    position: relative;
+    top : -800px;
+    /* background-image: linear-gradient(#0d1741,#0B0C10); */
+    height: 800px;
+    width: 100%;
 }
 .Roblox{
     padding: 0%;
@@ -39,11 +80,15 @@ h1 {
     float: left;
     width: 100%;
     height: 100%;
+    position: relative;
+    /* opacity: 0.5; */
+    /* display: none; */
 }
 .Roblox-info{
-    position: absolute;
+    position: relative;
     padding-top: 15%;
     padding-left: 8%;
+    top :-550px;
     flex: 30%;
     text-align: left;
     width: 30%;
