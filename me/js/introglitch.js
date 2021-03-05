@@ -6,9 +6,9 @@ rgbKineticSlider = new rgbKineticSlider({
     itemsTitles: texts,
 
     backgroundDisplacementSprite:
-        "http://hmongouachon.com/_demos/rgbKineticSlider/map-9.jpg",
+        "img/map-9.jpg",
     cursorDisplacementSprite:
-        "http://hmongouachon.com/_demos/rgbKineticSlider/displace-circle.png",
+        "img/displace-circle.png",
     cursorScaleIntensity: 0.6,
     cursorMomentum: 0.14,
     cursorTextEffect : true, // enable cursor text effect
