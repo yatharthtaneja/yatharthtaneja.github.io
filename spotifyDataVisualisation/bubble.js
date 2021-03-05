@@ -21,14 +21,14 @@
         return radiusScale(d.Streams)+1.5; 
     })
     var forceCollide2 = d3.forceCollide(function(d){
-        return radiusScale(d.Streams)+5; 
+        return radiusScale(d.Streams)*2; 
     })
     var forceX = d3.forceX(function(d){
         if(d.Position<= 30)
             return width/4
         else
             return 3*width/4
-    }).strength(0.05)
+    }).strength(0.08)
     var forceXcombine = d3.forceX(function(d){
         if(d.Position<= 30)
             return width/2-40
@@ -37,7 +37,7 @@
     }).strength(0.05)
     var forceY = d3.forceY(function(d){
         return height/2
-    }).strength(0.05)
+    }).strength(0.08)
     var forceYSplit = d3.forceY(function(d){
         if(d.Position>0 && d.Position<31)
             return height/2
@@ -56,13 +56,14 @@
             return Math.random()*width/2
         else
             return Math.random()*width/2 +width/2
-    }).strength(0.05)
+    }).strength(0.5)
     var simulation = d3.forceSimulation()
     .force("x", forceXRandom)
     .force("y", forceYrandom)
     .force("collide",forceCollide)
+    .alphaTarget(0.5)
 
-    
+
     // to position our circle
     d3.queue().defer(d3.csv,"tracks.csv").await(ready)
 
@@ -100,15 +101,18 @@
         .attr("cx",100)
         .attr("cy",300)
         .on('click', function(d){
-            // console.log(d);
-            // location. href = d.URL;
-            window.open(d.URL);
 
+            window.open(d.URL);
         })
         .on('mouseover',function(d, i){
+            d.Streams*=2;
             d3.select(this).transition()
             .duration('50')
-            .attr('opacity','.85');
+            .attr('opacity','.85')
+            .attr("r",function(d){
+                return radiusScale(d.Streams); // scaling them based on their Streams
+            });
+            // d3.select(this).rotate(30);
             div.transition()
             .duration(50)
             .style("opacity", 1);
@@ -119,12 +123,7 @@
             var image = new Image();
             image.src = url;
             image.width = 150
-            var h = document.createElement("H3")                // Create a <h1> element
-            var t = document.createTextNode("#"+d.Position+" " +d.TrackName);     // Create a text node
-            h.appendChild(t);    
-            // var h2 = document.createElement("H3")                // Create a <h1> element
-            // var t2 = document.createTextNode(d.TrackName);     // Create a text node
-            // h2.appendChild(t2);    
+
             
             div.html("")
             .style("left", (d3.event.pageX + 10) + "px")
@@ -132,21 +131,28 @@
             var div2 = document.getElementById("ddiv");
             div2.innerHTML = `<div><div> <img src = ${d.Images} style="width : 150px"> </div><div class="test1" >#${d.Position} ${d.TrackName} </div>
             <div class="test1" >${d.Artist} </div>
-            <div class="test1" >${d.Streams} Streams </div>
+            <div class="test1" >${d.Streams/2} Streams </div>
             </div>`
             // div2.appendChild(h)
             // .appendChild(image);
 
-
+            simulation
+            .force("collide",forceCollide);
         })
         .on('mouseout',function(d,i){
+            d.Streams/=2;
             d3.select(this).transition()
             .duration('50')
-            .attr('opacity','1');
+            .attr('opacity','1')
+            .attr("r",function(d){
+                return radiusScale(d.Streams); // scaling them based on their Streams
+            });
 
             div.transition()
             .duration(50)
             .style("opacity", 0);
+            simulation
+            .force("collide",forceCollide);
             
         })
         
@@ -160,6 +166,7 @@
             simulation
             .force("y",forceY)
             .alphaTarget(0.05)
+            .restart()
 
             
 
@@ -181,10 +188,10 @@
         d3.select("#restart").on('click',function(){
             simulation
             .force("y",forceYrandom)
-            .alphaTarget(0.25)
+            .alphaTarget(0.5)
             simulation
             .force("x",forceXRandom)
-            .alphaTarget(0.35)
+            .alphaTarget(0.5)
         })
         simulation.nodes(datapoints)
         .on('tick',ticked)
@@ -199,4 +206,10 @@
             })
         }
     }
+    
+    simulation
+    .force("y",forceYrandom)
+    .force("x",forceXRandom)
+    // .alphaTarget(0.5)
 })();
+

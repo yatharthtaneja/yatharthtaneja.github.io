@@ -3,6 +3,19 @@ html,body{
     padding: 0%;
 background-color:#181717;
 font-family: 'Helvetica';font-size: 18px;
+cursor: none;
+}
+
+.cursor{
+position: fixed;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: #1AB26B;
+/* transition: 0.1s; */
+transform: translate(-50%,-50%);
+pointer-events: none;
+mix-blend-mode: difference;
 }
 div.info {
     position: absolute;
@@ -30,7 +43,7 @@ div.info {
     word-wrap: break-word;      
     /* font-size: 20px;     */
 }   
-#split{
+#combine{
     margin-right: 10%;
 }
 .heading{
@@ -48,9 +61,10 @@ div.info {
 }
 .button{
 float: right;
-margin-top:1.2% ;
+margin-top:1% ;
 margin-left: 0.8%;
 background:#1AB26B;
+font-family: 'Helvetica';
 color:#fff;
 border-radius: 1em;
 border: none;
@@ -60,4 +74,9 @@ height:30px;
 padding:0 2em;
 cursor:pointer;
 outline:none;
+}
+button:hover ~ .cursor{
+    transform: scale(3);
+    /* background-color: #1AB26B; */
+
 }

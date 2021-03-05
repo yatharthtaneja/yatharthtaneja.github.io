@@ -10,15 +10,24 @@
 </head>
 <body>
     <div class= "header">
-        <img src="Assets/SpotifyLogo.png" id = "logo">
+        <img src="Assets/SpotifyLogo2.png" id = "logo">
         <h1 class="header-title"> Top 100</h1>
         <!-- <div class="vl"></div> -->
-        <button class ="button" id ="split">Split</button>
-        <button class ="button" id="combine">Combine</button>
-        <button class ="button" id="restart">Random</button>
+        
+        <button class ="button" id="combine">Unity</button>
+        <button class ="button" id="restart">Chaos</button>
+        <button class ="button" id ="split">Top 30-70</button>
+    <div class ="cursor"></div>
+
     </div>
     <div id = "chart"></div>
- 
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove',(e)=>{
+            cursor.style.left = e.pageX+ 'px';
+            cursor.style.top = e.pageY+ 'px';
+        })
+    </script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src= "bubble.js"></script>
 </body>

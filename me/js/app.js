@@ -27,7 +27,7 @@
   
     container.appendChild(renderer.domElement);
     controls = new THREE.OrbitControls(camera , renderer.domElement);
-    controls.enableZoom = false ;
+    // controls.enableZoom = false ;
     //lights 
     hlight = new THREE.AmbientLight (0x3d3d3d,7);
     scene.add(hlight);
@@ -56,7 +56,7 @@
   }
   function animate() {
     requestAnimationFrame(animate);
-    build.rotation.y += 0.005;
+    // build.rotation.y += 0.005;
     zoom = controls.target.distanceTo( controls.object.position )
     var flag  = 1 ;
     if(zoom<=1071){
