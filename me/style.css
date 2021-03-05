@@ -1,150 +1,248 @@
-html,body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0%;
-    padding-top: 0%;
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
-    font-family: 'Raleway';font-size: 18px;
-  }
-    /* visited link */
-    a:visited {
-        color: white;
-        text-decoration: none;
-      }
-      
-      /* mouse over link */
-      a:hover {
-        color:white;
-        text-decoration: none;
-    
-      }
-      
-      /* selected link */
-      a:active {
-        text-decoration: none;
-        color: white
-      }
-.row{
-    display: flex;
-    height: 100vh;
-
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+html{
+    /* cursor: url("img/finger.png"), auto;
+     */
+     overflow-x: hidden ;
 }
-h1 {
-    font-family: 'nunito';font-size: 45px;
-}
-.hello{
-color: #1f2833; display: block; 
-padding-left: 10%;
-padding-top: 15%;
-text-align: left; margin: 0%; font-size: 60px;
-position: relative;
-    background: transparent;
-}
-.Name{
-    padding-left:10% ;
-    color: #66FCF1; display: block; text-align: left; margin: 0%; font-size: 100px;
-    position: relative;
-    background: transparent;
-}
-
-.me{
-    padding-left:10.5% ;
-    color:  #C5C6C8; display: block; text-align: left; margin: 0%; 
-    position: relative;
-    background: transparent;
-}
-.scene,
-/* canvas{
-    position: absolute;
+body {
     width: 100%;
     height: 100%;
-} */
-.home{
-    background-color: #0B0C10;
-    background: transparent;
-    position: relative;
-    top : -800px;
-    /* background-image: linear-gradient(#0d1741,#0B0C10); */
-    height: 800px;
-    width: 100%;
-}
-.Roblox{
-    padding: 0%;
-    flex: 100%;
-    float: left;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    /* opacity: 0.5; */
-    /* display: none; */
-}
-.Roblox-info{
-    position: relative;
-    padding-top: 15%;
-    padding-left: 8%;
-    top :-550px;
-    flex: 30%;
-    text-align: left;
-    width: 30%;
-    color: #C5C6C8;
-    background: transparent ;
-}
-a:link {
+    margin: 0;
+    background: #161616;
     color: white;
+    /* font-family: "Cosi Azure" !important; */
+    font-family: 'Monument Extended', sans-serif;
+
+}
+/* $redColor: rgba(244,67,54,1);
+$blueColor:rgba(33,150,243,1); */
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-transform: uppercase !important;
+}
+
+@media screen and (min-width: 53em) {
+    .slider {
+        height: 100vh;
+    }
+}
+
+.rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+nav a {
     text-decoration: none;
+    position: absolute;
+    top: 46vh;
+    z-index: 1;
+    padding: 20px;
+    transition: 0.3s;
+    background: black;
+    color: white;
+}
+
+nav a.next {
+    right: 10vw;
+}
+
+nav a.prev {
+    left: 10vw;
+}
+
+@media screen and (max-width: 53em) {
+    nav a {
+        top: auto;
+        bottom: 3rem;
+    }
+}
+
+.smooth-scroll-wrapper {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    /* overflow-x: hidden; */
+    margin: 800px auto;
+}
+.content {
+    width: 70%;
+    margin: 160px auto;
+}
+section {
+    transition: transform 0.25s;
+    will-change: transform;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-top: 0;
+    /* color: #FCB304; */
+}
+
+p {
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    line-height: 30px;
+}
+
+section img {
+    width: 100%;
+}
+.left{
+    width: 46%;
+    float: left;
+    padding: 2%;
+}
+.parent{
+    padding-bottom: 2%;
+}
+/* div {
+    margin: 0 0 70px 0;
+} */
+
+/* ::-webkit-scrollbar {
+    width: 0;
+  } */
+  
+  .progressbar {
+    position: fixed;
+    top: 0;
+    left: 85%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 1px;
+    z-index: 1;
+  }
+  .navigation-list{
+      margin: 0;
+      padding: 0;
+  }
+  .navigation-wrapper ul {
+    /* margin-top: 240px; */
+    /* margin-left: 100px; */
+    /* margin-bottom: 200px; */
+    /* margin: 0; */
+    list-style: none;
+    position: relative;
+  }
+  
+  .navigation-item {
+    display: block;
+    user-select: none;
+    margin: 120px 0;
 
   }
- 
   
-.button1 {
-	--width: 150px;
-	--height: 50px;
-	border: 0;
-	position: relative;
-    left: 55%;
-	width: var(--width);
-	height: var(--height);
-	font-size: 1.2rem;
-	font-family: "Bebas Neue";
-    color: #66FCF1 ;
-	font-weight: bold;
-	margin: 1rem;
-	border-radius: 0.5em;
-	cursor: pointer;
-	overflow: hidden;
-	background: #1f2833;
-}
-	/* button:nth-child(1) {
-		background: rgb(255, 223, 208);
-		color: rgb(255, 112, 46);
-	} */
+  a {
+    /* font-family: "Cosi Azure"; */
+    font-family: 'Monument Extended', sans-serif;
+    font-size: 5em;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .white{
+      font-size: 1em;
+      color: #ffffff;
+  }
+  span {
+    position: relative;
+    display: block;
+  }
 
+  ul{
+      margin: 0;
+      /* font-size: 9em; */
+  }
+.navigation-item span:before {
+    width: 0;
+    color: #ffffff;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+  }
+  
+  .navigation-item span:hover:before {
+    width: 100%;
+  }
+  #image-div{
+    position: absolute;
+    
+  }
+  .project-preview-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+  .project-preview {
+    position: absolute;
+    /* top: 12%;
+    left: 50%; */
+    /* width: 400px; */
+    /* offset-anchor: 0% 0%; */
+    height: 300px;
+    background: url(img-01.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+  }
+  #sketch-container{
+    position: absolute;
+    display: none;
+    transform: translate(-20%,-20%);
+  }
 
-	.button1 span {
-		position: relative;
-		z-index: 2;
-		transition: color 200ms ease;
-	}
-	.button1 div {
-		position: absolute;
-		width: calc(3 * var(--width));
-		height: calc(3 * var(--height));
-		left: 0;
-		top: 0;
-		transform: translate(-50%, -50%);
-		border-radius: 50%;
-		background: #66FCF1;
-		clip-path: circle(0% at 50% 50%);
-		transition: clip-path 500ms ease;
-		z-index: 1;
-	}
-	.button1:hover span {
-			color: black;
-		}
-    .button1:hover div {
-			clip-path: circle(100% at 50% 50%);
-		}
-	
-
-
+  .center-float{
+     justify-content: center; 
+     align-items: center;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+  }
+  .icon-3d {
+    padding: 10px;
+    -webkit-animation: icon3d 200ms 10;
+    animation: icon3d 200ms 10;
+    color: #fff;
+  }
+    .icon-3d:hover {
+      -webkit-animation: icon3d 200ms infinite;
+            animation: icon3d 200ms infinite;
+    }
+  
+  
+  @keyframes icon3d {
+    0% {
+      text-shadow: 5px 4px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
+    }
+    25% {
+      text-shadow: -5px -6px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
+    }
+    50% {
+      text-shadow: 5px -4px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
+    }
+    75% {
+      text-shadow: -8px -4px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
+    }
+    100% {
+      text-shadow: -5px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
+    }
+  }

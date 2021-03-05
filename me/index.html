@@ -1,57 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel = "stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- //fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700|Montserrat:400,600,700|Nunito:300,400,700,800&amp;display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yatharth Taneja</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+     
+      <div id="image-div">
+      <img id="image-move" style=" position: absolute; width: auto; height: 300px;  display: none;" src="img/WALLPAPER.png">
+    </div>     
+      <div class="slider">
+                <div id="rgbKineticSlider" class="rgbKineticSlider">
 
-</head>
-<body>
-  <!-- <canvas id = "home"> </canvas> -->
-  <!-- <div id="home"></div>
-<div class ="home" >   
- <h1 class="hello"> Hello!</h1>
- <h1 class="Name">I'm Yatharth.</h1>
+                </div>
+            </div>
+        
+        <div class="smooth-scroll-wrapper">
+            <div class="content">
+                <section>
+                    <div class="parent">
+                        <div class ="left">
+                        <img src="img/IIITD.png" class ="info_image" />
+                        </div>
+                        <div class ="left">
+                        <h1>Knock, Knock!
 
-<p class="me">I am a student at IIITD currently pursuing Computer Science & Design.
-  <br>I like to design and create things.<br>In my free time I like to manage and organise events.</p>
-</div> -->
+                        </h1>
+                        <p>
+                            Hi,<br>
+                            I am a Undergrad Student, currently pursuing <a class="white">B.Tech in Computer Science and Design </a>from <a class="white">Indraprastha Institute of Information Technology , Delhi.</a>
+                        <br> living in Delhi, India
+                            <br> <a class="white">I like to create, (re)design, code  stuff and tell stories. </a> 
+                        Along the way, I've learned to embrace the <a class="white">process</a>, think <a class="white">holistically</a>, <a class="white">collaborate</a> in a team and <a class="white">empathize</a> with the users better.
 
+                        </p>
+                        </div>
+                    </div>
+                    <div class="parent">
+                        <div class="left">
+                            <h1>Bag Of Tricks</h1>
+                        <p>
+                            UI/UX Design, Graphic Design, Human Computer Interaction,Design Research, interaction design,  making Illustrations, Logos and Art, web development. I plan to learn App Development.
+                        </p>
+                        </div>
+                        <div class="left">
+                        <img src="img/weeknd.png" class ="info_image" />
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/odc.jpg" />
+                        <h1>Behind The Scenes</h1>
+                        <p>
+                            When I am not working , I am usually behind the stage helping others in creating memories. I like to manage and organise events. I am the President of Meraki, Art Soc of IIITD and a senior member at Student Council and Cultural Council IIITD.
+                        </p>
+                    </div>
+                    
+                <!-- </section>
+                <section> -->
+                    <div class="navigation-wrapper">
+                        <div id="project-preview-wrapper" class="project-preview-wrapper">
+                          <div id ="project-preview"class="project-preview"></div>
+                          
+                        </div>
+                        <ul class="navigation-list">
+                          <li class="navigation-item">
+                            <a class="navigation-link project-1" href="#">
+                              <span data-text="Roblox">Roblox</span>
+                            </a>
+                          </li>
+                          <div class="project-overlay"></div>
+                          <li class="navigation-item">
+                            <a class="navigation-link project-2" href="#">
+                              <span data-text="Bold">Bold</span>
+                            </a>
+                          </li>
+                          <li class="navigation-item">
+                            <a class="navigation-link project-3" href="#">
+                              <span data-text="StreamBubble">StreamBubble</span>
+                            </a>
+                          </li>
+                          <li class="navigation-item">
+                            <a class="navigation-link project-4" href="#">
+                              <span data-text="Lagom">Lagom</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="center-float">
+                        <i class="fa fa-github fa-4x icon-3d" onclick="window.open('https://github.com/yatharthtaneja')"></i>
+                        <i class="fa fa-behance fa-4x icon-3d" onclick="window.open('https://www.behance.net/yath_art_h')"></i>
+                        <i class="fa fa-instagram fa-4x icon-3d" onclick="window.open('https://www.instagram.com/yath_art_h/')"></i>
+                        <i class="fa fa-linkedin fa-4x icon-3d"onclick="window.open('https://www.linkedin.com/in/yatharthtaneja/')"></i>
+                        <div class="footer"> </div>
+                      </div>
+                     
+                </section>
+              
+            </div>
+        </div>
+        
+        <div id ="sketch-container">
+        </div>
+<!-- Jquery CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <!-- TweenMax -->
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+        <!-- Pixi JS -->
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
 
-    <div class = "Roblox" id = "Roblox">
-    </div>
-    <div class="remove-scroll">
-      <div class = "Roblox-info">
-        <h1 style="color: #66FCF1;"> Roblox </h1>
-        <p>Made Virtual campus of IIITD during the covid-19 pandemic on Roblox.
-          Various events such as HuntIT - Treasure Hunt, Graduation Day, Cadence were conducted on this platform 
-        </p>
-        <p><b>Team Size : 2 </b><p>
-        <button href="#" class="button1">
-          <span >Visit Roblox</span>
-          <div></div>
-        </button>
-      </div>
-    </div>
-
-<!-- <script src="sketch.js"></script> -->
-  
-<script src = "js/three.min.js"></script>
-<script src = "js/button.js"></script>
-<!-- <script src="logo.js"></script> -->
-<script src="js/GLTFLoader.js"></script>
+        <!-- Slider Plugin -->
+        <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script> -->
+        <script src="js/introglitch.js">
+        </script>
+        <script src="js/scroll.js"></script>
+        <script src="js/projects.js"></script>
+        <!-- <script src="js/sketch.js"></script> -->
+        <script src = "js/three.min.js"></script>
+        <script src="js/GLTFLoader.js"></script>
 <script src="js/OrbitControls.js"></script>
-<script src="js/app.js"></script>
 
-</body>
+        <script src="js/roblox.js" type="module"></script>
+    </body>
 </html>
