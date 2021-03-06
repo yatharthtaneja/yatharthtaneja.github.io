@@ -267,3 +267,9 @@ position: absolute;
   width: 200px;
   height: 400px;
 }
+
+.footer{
+padding-top: 25px;
+padding-bottom: 20px;
+  text-align: center;
+}

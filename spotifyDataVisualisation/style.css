@@ -1,11 +1,13 @@
 html,body{
     margin: 0%;
     padding: 0%;
-background-color:#181717;
+background-color:#161616;
 font-family: 'Helvetica';font-size: 18px;
 cursor: none;
 }
-
+#chart{
+    margin: 0%;
+}
 .cursor{
 position: fixed;
 width: 30px;

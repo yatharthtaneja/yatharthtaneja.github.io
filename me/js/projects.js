@@ -7,10 +7,7 @@
   document.getElementById('sketch-container').style.display='none';
   });
     $(".project-2").hover(function() {
-      // var tag = document.getElementById('image-move');
-      // tag.src='img/weeknd.png'
-  
-      // console.log("heree")
+
     document.getElementById('set-card').style.display='block';
 
 
@@ -21,7 +18,7 @@
     $(".project-3").hover(function() {
 
       var tag = document.getElementById('image-move');
-      tag.src='img/IIITD.png'
+      tag.src='img/stream-bubble.png'
 
   
       // console.log("heree")
@@ -84,7 +81,7 @@
     });
   
 
-  $(".info_image").mouseover(function(){
+  $("#change").mouseover(function(){
       $(this).attr('src',$(this).attr("src").replace("img/weeknd.png","img/WALLPAPER.png"));
   }).mouseout(function(){
     $(this).attr('src',$(this).attr("src").replace("img/WALLPAPER.png","img/weeknd.png"));

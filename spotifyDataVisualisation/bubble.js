@@ -1,5 +1,5 @@
 (function(){
-    var width = 1500, height = 700;
+    var width = window.innerWidth, height = window.innerHeight-70;
     var svg = d3.select('#chart')
     .append("svg")
     .attr("height",height)
