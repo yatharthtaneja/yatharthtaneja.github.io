@@ -44,10 +44,33 @@ const hlight = new THREE.AmbientLight (0x3d3d3d,7);
    const  light = new THREE.PointLight(0x3d3d3d,10);
     light.position.set(0,1,1);
     scene.add(light);
+
+    document.addEventListener('keydown', function(e) {
+      switch (e.keyCode) {
+          case 65:
+              // alert('left');
+               build.rotation.y -= 0.05;
+              break;
+          case 87:
+            //  alert('up');
+            build.rotation.x += 0.05;
+
+              break;
+          case 68:
+              // alert('right');
+               build.rotation.y += 0.05;
+              break;
+          case 83:
+              // alert('down');
+              build.rotation.x -= 0.05;
+
+              break;
+      }
+  }); 
 const animate = function () {
   requestAnimationFrame(animate);
 
-    build.rotation.y += 0.005;
+    // build.rotation.y += 0.005;
 
   renderer.render(scene, camera);
 };

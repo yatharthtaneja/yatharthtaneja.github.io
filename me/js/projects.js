@@ -1,25 +1,4 @@
 
-// $(document).ready(function() {
-//     TweenMax.set(".image-div", { width: 0 });
-
-//     var time = new TimelineLite();
-
-//     $(document)
-//       .on("mouseover", ".navigation-item", function(e) {
-//         time = new TimelineLite();
-//         time.to($(".image-div"), 1, {
-//           width: "400px",
-//           ease: Expo.easeInOut
-//         });
-//       })
-//       .on("mouseout", ".navigation-item", function() {
-//         time = new TimelineLite();
-//         time.to($(".image-div"), 0.5, {
-//           width: "400px",
-//           ease: Expo.easeInOut
-//         });
-//       });
-// });
   $(".project-1").mouseenter(function() {
       // var tag = document.getElementById('sketch-container');
       // tag.src='img/IIITD.png'
@@ -28,13 +7,16 @@
   document.getElementById('sketch-container').style.display='none';
   });
     $(".project-2").hover(function() {
-      var tag = document.getElementById('image-move');
-      tag.src='img/weeknd.png'
+      // var tag = document.getElementById('image-move');
+      // tag.src='img/weeknd.png'
   
       // console.log("heree")
-    document.getElementById('image-move').style.display='block';
+    document.getElementById('set-card').style.display='block';
+
+
     }).mouseleave(function() {
-  document.getElementById('image-move').style.display='none';
+  document.getElementById('set-card').style.display='none';
+
   });
     $(".project-3").hover(function() {
 
@@ -101,9 +83,18 @@
       
     });
   
+
   $(".info_image").mouseover(function(){
       $(this).attr('src',$(this).attr("src").replace("img/weeknd.png","img/WALLPAPER.png"));
   }).mouseout(function(){
     $(this).attr('src',$(this).attr("src").replace("img/WALLPAPER.png","img/weeknd.png"));
 
+  })
+
+  document.addEventListener("mousemove", e =>{
+    gsap.to(".car",{
+      x : e.clientX-120,
+      y : e.clientY-80,
+      stagger: -0.1
+    })
   })
