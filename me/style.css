@@ -9,7 +9,7 @@ body {
     height: 100%;
     margin: 0;
     background: #161616;
-    color: white;
+    color: white !important;
     /* font-family: "Cosi Azure" !important; */
     font-family: 'Monument Extended', sans-serif;
 
@@ -28,7 +28,12 @@ $blueColor:rgba(33,150,243,1); */
         height: 100vh;
     }
 }
-
+.hoverimage img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
 .rgbKineticSlider {
     display: block;
     position: relative;
@@ -154,11 +159,11 @@ section img {
     font-family: 'Monument Extended', sans-serif;
     font-size: 5em;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.3) !important;
   }
   .white{
       font-size: 1em;
-      color: #ffffff;
+      color: #ffffff !important;
   }
   span {
     position: relative;
@@ -171,12 +176,12 @@ section img {
   }
 .navigation-item span:before {
     width: 0;
-    color: #ffffff;
+    color: #ffffff ;
     overflow: hidden;
     position: absolute;
     content: attr(data-text);
     transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
-  }
+}
   
   .navigation-item span:hover:before {
     width: 100%;

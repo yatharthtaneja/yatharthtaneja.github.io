@@ -12,7 +12,10 @@
 
 
         <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/voiceScroll.js"></script>
     </head>
     <body>
      
@@ -20,14 +23,14 @@
         
       <img id="image-move" style=" position: absolute; width: auto; height: 300px;  display: none;" src="img/WALLPAPER.png">
     </div>     
-      <div class="slider">
+      <div id ="home" class="slider">
                 <div id="rgbKineticSlider" class="rgbKineticSlider">
 
                 </div>
             </div>
         
         <div class="smooth-scroll-wrapper">
-            <div class="content">
+            <div id="about" class="content">
                 <section>
                   <!-- <div class="container"> -->
                     <div class="row">
@@ -56,8 +59,8 @@
                             UI/UX Design, Graphic Design, Human Computer Interaction,Design Research, interaction design,  making Illustrations, Logos and Art, web development. I plan to learn App Development.
                         </p>
                         </div>
-                        <div class="six columns">
-                        <img src="img/weeknd.png" class="u-max-full-width" id="change" />
+                        <div  class="six columns">
+                        <img src="img/weeknd.png" class="u-max-full-width img-1" id="change" />
                         </div>
                     </div>
                     <div>
@@ -76,7 +79,7 @@
                   </div>
                 <!-- </section>
                 <section> -->
-                    <div class="navigation-wrapper">
+                    <div id ="projects" class="navigation-wrapper">
                         <div id="project-preview-wrapper" class="project-preview-wrapper">
                           <div id ="project-preview"class="project-preview"></div>
                           
@@ -146,7 +149,7 @@
         <script src = "js/three.min.js"></script>
         <script src="js/GLTFLoader.js"></script>
         <script src="js/OrbitControls.js"></script>
-
+        <script src="js/annyang.min.js"></script>
         <script src="js/roblox.js" type="module"></script>
     </body>
 </html>

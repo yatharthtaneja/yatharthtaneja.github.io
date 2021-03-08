@@ -11,7 +11,7 @@ rgbKineticSlider = new rgbKineticSlider({
         "img/displace-circle.png",
     cursorScaleIntensity: 0.6,
     cursorMomentum: 0.14,
-    cursorTextEffect : true, // enable cursor text effect
+    cursorTextEffect : true, 
     swipe: true,
     swipeDistance: window.innerWidth * 0.4,
     swipeScaleIntensity: 2,
@@ -37,11 +37,8 @@ rgbKineticSlider = new rgbKineticSlider({
     textsRgbEffect: true,
     textsRgbIntensity: 1,
     textTitleLetterspacing : 90,
-    // textTitleOffset: 10,
-    // textSubTitleColor : '0x737373', // subtitle color ex : 0x000000
     textSubTitleSize : 100, // subtitle size
     mobileTextSubTitleSize : 21, // mobile subtitle size
     textSubTitleLetterspacing : 2, // subtitle letter spacing
-    // textSubTitleOffsetTop : 90, // subtitle offset top
     mobileTextSubTitleOffsetTop : 90, // mobile subtitle offset top
 });
