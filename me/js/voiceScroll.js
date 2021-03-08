@@ -1,4 +1,4 @@
-var targetId = ["home", "about", "projects"];
+var targetId = ["home", "project"];
 if (annyang) {
     var binaryblood = function(target) {
             console.log(target);
@@ -7,7 +7,10 @@ if (annyang) {
               if (targetId[i] == target) {
                 var elm = document.getElementById(target);
                 console.log(target);
-                elm.scrollIntoView({behaviour: 'smooth', block: 'top'});
+                // var currx = window.screenX;
+                // $(window).scrollTop($('#projects').offset().top);
+                // elm.scrollIntoView({behaviour: 'smooth' , block: 'top'});
+                elm.scrollIntoView(true);
                 break;
               }
             }
@@ -16,7 +19,30 @@ if (annyang) {
     var helloer = function() {
             alert('Hello to you too VISITOR');
           }
+    var namaste1 = function() {
+      // alert('namaste');
+      document.getElementById('hidden-namaste').style.display='flex';
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = "Namastey!";
+      window.speechSynthesis.speak(msg);
+      setTimeout(function(){ 
+      document.getElementById('hidden-namaste').style.display='none';
 
+        
+        }, 5000);
+    }
+    var op = function() {
+      window.open("https://www.behance.net/yath_art_h")
+    }
+    var op2 = function() {
+      window.open("https://github.com/yatharthtaneja/")
+    }
+
+   var op3 = function() {
+     var msg = new SpeechSynthesisUtterance();
+    msg.text = "Hey!";
+    window.speechSynthesis.speak(msg);
+  }
     var pause = function() {
       annyang.pause(); 
       document.getElementById('speechStatus').innerHTML = "MIC has been turned OFF, audio commands not being accepted";
@@ -29,15 +55,27 @@ if (annyang) {
 
     var commands = {
       'go to *target': binaryblood,
-      'hello': helloer
+      'hello': op3,
+      'namaste': namaste1,
+      'show me design projects': op,
+      'behance': op,
+      'show me CS projects':op2,
+      'github': op2
+
 
     };
 
-    annyang.debug();
+    // annyang.debug();
     annyang.addCommands(commands);
     annyang.start();
 }
-
+if ('speechSynthesis' in window) {
+  console.log('Speech recognition supported 😊');
+  // code to handle recognition here
+} else {
+  console.log('Speech recognition not supported 😢');
+  // code to handle error
+}
 // var pauseBtn = function() {
 //   annyang.pause(); 
 //   document.getElementById('speechStatus').innerHTML = "MIC has been turned OFF, audio commands not being accepted";
