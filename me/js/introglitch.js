@@ -1,3 +1,5 @@
+// opensource library : https://github.com/hmongouachon/rgbKineticSlider
+
 const images = ["img/yatharth2.png", "img/yatharth-sketch2.png"];
 const texts = [["", "Yatharth Taneja"], ["","@Yath_art_h"]];
 

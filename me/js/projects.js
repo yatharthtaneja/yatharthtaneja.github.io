@@ -42,6 +42,14 @@
   document.getElementById('image-move').style.transform="translate(0%,0%)";
 
   });
+  $("#tt").hover(function() {
+    document.getElementById('tooltiptext').style.display="block";
+
+  }).mouseleave(function() {
+    document.getElementById('tooltiptext').style.display="none";
+
+
+});
 
     // img.src = 'http://files.myopera.com/lengoc89/albums/317185/3133~Kitty-Posters.jpg';
     document.addEventListener('mousemove', function(e) {

@@ -13,12 +13,26 @@
 
         <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+        <!-- <script src="js/pace.js"></script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="js/voiceScroll.js"></script>
+        
     </head>
     <body>
-      <div id="image-div">
+      <div id="tooltiptext">
+        <p>
+          Play with your mouse and burst my bubbly photo :D, <br>
+          Talk to my website by using commands <br>
+          'hello' , 'namaste' , 'goodmorning' , 'goodnight' , 'show me design projects' , 'github' , 'go to home' , 'go to design projects' , or say any of my projects name.
+          <br>Play using the WASD keys while on the Building 3D Model 
+        </p>
+      </div>
+      <div class="tooltip">
+        <!-- <button id="tt"> i</button> -->
+        <i id="tt" class="fa fa-info-circle fa-2x icon-3d"></i>
+      </div>
+    <div id="image-div">
       <img id="image-move" style=" position: absolute; width: auto; height: 300px;  display: none;" src="img/WALLPAPER.png">
       </div> 
 
@@ -39,7 +53,7 @@
 
                 </div>
             </div>
-        
+    
         <div class="smooth-scroll-wrapper">
             <div  class="content">
                 <section>
@@ -110,7 +124,7 @@
                           </li>
                           <li class="navigation-item">
                             <a class="navigation-link project-3" href="#" onclick="window.open('https://yatharthtaneja.github.io/spotifyDataVisualisation/')">
-                              <span data-text="StreamBubble">StreamBubble</span>
+                              <span data-text="StreamBubble">Stream Bubble</span>
                             </a>
                           </li>
                           <li class="navigation-item">
@@ -148,7 +162,9 @@
         <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
-
+    <!-- tippy js -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
         <!-- Slider Plugin -->
         <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script> -->

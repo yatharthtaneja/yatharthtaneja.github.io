@@ -293,3 +293,27 @@ padding-top: 25px;
 padding-bottom: 20px;
   text-align: center;
 }
+
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  /* display: flex; */
+  /* float: right; */
+}
+
+#tooltiptext{
+  position: fixed;
+  background-color: #161616;
+  border-radius: 3%;
+  border-color: aqua;
+  border-width: 2px;
+  border-style: solid;
+  z-index: 1000;
+  bottom: 30px;
+  right: 30px;
+  padding: 2%;
+  width: 30%;
+  display: none;
+}
