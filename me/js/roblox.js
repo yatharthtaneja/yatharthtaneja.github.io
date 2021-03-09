@@ -8,30 +8,29 @@ loader.load( 'img/sports.glb', function ( gltf ) {
      build = gltf.scene.children[0];
     build.scale.set(2,2,2);
 
-	scene.add( gltf.scene );
+	scene.add( gltf.scene ); // loading and adding the model to the scene
 
 }, undefined, function ( error ) {
 
 	console.error( error );
 
 } );
-// scene.background = new THREE.Color(0x282c34);
-const camera = new THREE.PerspectiveCamera(400, 2, 0.1, 10000);
+const camera = new THREE.PerspectiveCamera(400, 2, 0.1, 10000); // creating a perspective camera
 camera.position.set(500,200,1200);
 // camera.zoom = 0.1;
-const renderer = new THREE.WebGLRenderer({alpha: true});
+const renderer = new THREE.WebGLRenderer({alpha: true}); //creating a renderer with alpha value true
 renderer.setSize(800, 400);
-renderer.setClearColor( 0x000000, 0 );
+renderer.setClearColor( 0x000000, 0 ); // so that i can have a transparent background 
 container = document.getElementById('sketch-container').appendChild(renderer.domElement);
-
+// putting the enderer inside the div
 var controls = new THREE.OrbitControls(camera , renderer.domElement);
-controls.addEventListener('change', renderer);
-controls.enableZoom=false;
+controls.addEventListener('change', renderer); // creaating a controller so that we can control the model
+controls.enableZoom=false; //disabling the zoom motion so that we can scroll the page
 
 const frontSpot = new THREE.SpotLight(0xeeeece);
 frontSpot.position.set(1000, 1000, 1000);
 scene.add(frontSpot);
-
+// adding lots of lights by experimenting 
 const frontSpot2 = new THREE.SpotLight(0xddddce);
 frontSpot2.position.set(-500, -500, -500);
 scene.add(frontSpot2);
@@ -44,34 +43,28 @@ const hlight = new THREE.AmbientLight (0x3d3d3d,7);
    const  light = new THREE.PointLight(0x3d3d3d,10);
     light.position.set(0,1,1);
     scene.add(light);
-
+// binding keys to controll the model 
     document.addEventListener('keydown', function(e) {
       switch (e.keyCode) {
           case 65:
-              // alert('left');
                build.rotation.y -= 0.05;
               break;
           case 87:
-            //  alert('up');
             build.rotation.x += 0.05;
 
               break;
           case 68:
-              // alert('right');
+
                build.rotation.y += 0.05;
               break;
           case 83:
-              // alert('down');
               build.rotation.x -= 0.05;
-
               break;
       }
   }); 
 const animate = function () {
   requestAnimationFrame(animate);
-
-    // build.rotation.y += 0.005;
-
+//function the render the scene ... 
   renderer.render(scene, camera);
 };
 

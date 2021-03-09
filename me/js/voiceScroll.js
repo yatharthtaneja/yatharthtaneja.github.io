@@ -1,7 +1,7 @@
 var targetId = ["home", "projects"];
 if (annyang) {
-    var binaryblood = function(target) {
-            console.log(target);
+    var callbackf = function(target) { // function that checks the target 
+            console.log(target); //and if target id exists scrolls it to the respective place
             var len = targetId.length;
             for (var i = 0; i < len; i++) {
               if (targetId[i] == target) {
@@ -12,21 +12,20 @@ if (annyang) {
               }
             }
           }
-          var abt = function() {
-            // alert('Hello to you too VISITOR');
-            // document.getElementById('hidden-hello').style.display='flex';
-            var msg = new SpeechSynthesisUtterance();
-            msg.text = "Hi,I am Yatharth Taneja, Undergrad Student, currently pursuing BTech in Computer Science and Design from Indraprastha Institute of Information Technology , Delhi.";
-            window.speechSynthesis.speak(msg);
-          }
+    var abt = function() {
+      // using inbuilt speech synthesis for text to speecg
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = "Hi,I am Yatharth Taneja, Undergrad Student, currently pursuing BTech in Computer Science and Design from Indraprastha Institute of Information Technology , Delhi.";
+      window.speechSynthesis.speak(msg);
+    }
 
     var helloer = function() {
-            // alert('Hello to you too VISITOR');
+            // changing the display to flex of the div when person says hello 
             document.getElementById('hidden-hello').style.display='flex';
             var msg = new SpeechSynthesisUtterance();
             msg.text = "Hello!";
-            window.speechSynthesis.speak(msg);
-            setTimeout(function(){ 
+            window.speechSynthesis.speak(msg); // text to speech 
+            setTimeout(function(){  // changing display back to none after 5 seconds
             document.getElementById('hidden-hello').style.display='none'; 
               }, 5000);
           }
@@ -102,7 +101,7 @@ if (annyang) {
     }
 
     var commands = {
-      'go to *target': binaryblood,
+      'go to *target': callbackf,
       'hello': helloer,
       'namaste': namaste1,
       'show me design projects': op,
