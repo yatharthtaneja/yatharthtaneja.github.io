@@ -31,7 +31,7 @@
     $(".project-4").hover(function() {
       // $(".project-preview").css({ "background-image": "url(img/yatharth.png)" });
       var tag = document.getElementById('image-move');
-      tag.src='img/weeknd.png'
+      tag.src='img/lagom.gif'
   
       // console.log("heree")
     document.getElementById('image-move').style.display='block';

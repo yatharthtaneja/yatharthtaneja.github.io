@@ -7,9 +7,6 @@ if (annyang) {
               if (targetId[i] == target) {
                 var elm = document.getElementById(target);
                 console.log(target);
-                // var currx = window.screenX;
-                // $(window).scrollTop($('#projects').offset().top);
-                // elm.scrollIntoView({behaviour: 'smooth' , block: 'top'});
                 elm.scrollIntoView(true);
                 break;
               }
@@ -17,8 +14,45 @@ if (annyang) {
           }
 
     var helloer = function() {
-            alert('Hello to you too VISITOR');
+            // alert('Hello to you too VISITOR');
+            document.getElementById('hidden-hello').style.display='flex';
+            var msg = new SpeechSynthesisUtterance();
+            msg.text = "Hello!";
+            window.speechSynthesis.speak(msg);
+            setTimeout(function(){ 
+            document.getElementById('hidden-hello').style.display='none'; 
+              }, 5000);
           }
+  var bye = function() {
+    // alert('Hello to you too VISITOR');
+    document.getElementById('hidden-hello').style.display='flex';
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "goodbye!";
+    window.speechSynthesis.speak(msg);
+    setTimeout(function(){ 
+    document.getElementById('hidden-hello').style.display='none'; 
+      }, 5000);
+  }
+  var gm = function() {
+    // alert('Hello to you too VISITOR');
+    document.getElementById('hidden-morning').style.display='flex';
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "Good Morning!";
+    window.speechSynthesis.speak(msg);
+    setTimeout(function(){ 
+    document.getElementById('hidden-morning').style.display='none'; 
+      }, 5000);
+  }
+  var gn = function() {
+    // alert('Hello to you too VISITOR');
+    document.getElementById('hidden-moon').style.display='flex';
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = "Good Night!";
+    window.speechSynthesis.speak(msg);
+    setTimeout(function(){ 
+    document.getElementById('hidden-moon').style.display='none'; 
+      }, 5000);
+  }
     var namaste1 = function() {
       // alert('namaste');
       document.getElementById('hidden-namaste').style.display='flex';
@@ -26,9 +60,7 @@ if (annyang) {
       msg.text = "Namastey!";
       window.speechSynthesis.speak(msg);
       setTimeout(function(){ 
-      document.getElementById('hidden-namaste').style.display='none';
-
-        
+      document.getElementById('hidden-namaste').style.display='none'; 
         }, 5000);
     }
     var op = function() {
@@ -36,6 +68,15 @@ if (annyang) {
     }
     var op2 = function() {
       window.open("https://github.com/yatharthtaneja/")
+    }
+    var roblox = function() {
+      window.open("https://www.roblox.com/games/5435169797/IIITD-Phase-1")
+    }
+    var bold = function() {
+      window.open("https://www.behance.net/gallery/98429045/BOLD-Playing-Cards")
+    }
+    var streambubble = function() {
+      window.open("https://yatharthtaneja.github.io/spotifyDataVisualisation/")
     }
 
    var op3 = function() {
@@ -55,12 +96,20 @@ if (annyang) {
 
     var commands = {
       'go to *target': binaryblood,
-      'hello': op3,
+      'hello': helloer,
       'namaste': namaste1,
       'show me design projects': op,
       'behance': op,
       'show me CS projects':op2,
-      'github': op2
+      'github': op2,
+      'good morning': gm,
+      'good night': gn,
+      'bye': bye,
+      'good bye': bye,
+      'see you': bye,
+      'roblox': roblox,
+      'stream bubble': streambubble,
+      'bold': bold
 
 
     };
