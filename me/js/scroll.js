@@ -1,3 +1,4 @@
+// reference https://codepen.io/emgiust/pen/rdOJwQ
 const body = document.body,
 scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
 height = scrollWrap.getBoundingClientRect().height - 1,
@@ -7,27 +8,27 @@ var offset = 1000;
 
 body.style.height = Math.floor(height) + "px";
 
-function smoothScroll() {
+function scrolls() {
 offset += (window.pageYOffset - offset) * speed;
 
 var scroll = "translateY(-" + offset + "px) translateZ(0)";
 scrollWrap.style.transform = scroll;
 
-callScroll = requestAnimationFrame(smoothScroll);
+callScroll = requestAnimationFrame(scrolls);
 }
 
-smoothScroll();
+scrolls();
 const content = document.querySelector("section");
 let currentPos = window.pageYOffset;
 
-const callDistort = function () {
+const Distort = function () {
 const newPos = window.pageYOffset;
 const diff = newPos - currentPos;
 const speed = diff * 0.35;
 
 content.style.transform = "skewY(" + speed + "deg)";
 currentPos = newPos;
-requestAnimationFrame(callDistort);
+requestAnimationFrame(Distort);
 };
 
-callDistort();
+Distort();
