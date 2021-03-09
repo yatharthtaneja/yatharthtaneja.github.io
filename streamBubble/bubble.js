@@ -72,11 +72,11 @@
         defs.selectAll(".artist-pattern")
         .data(datapoints)
         .enter().append("pattern")
-        .attr("class","artist-pattern")
-        .attr("id",function(d){
-            return d.Position;
+        .attr("class","artist-pattern") // using custom id based on position to make
+        .attr("id",function(d){         // the corresponding images as partern so 
+            return d.Position;          //that they can be used on the circles respectively 
         })
-        .attr("height","100%")
+        .attr("height","100%") // settings for the custom images
         .attr("width","100%")
         .attr("patternContentUnits","objectBoundingBox")
         .append("image")
@@ -88,21 +88,21 @@
             return d.Images;
         });
         // making different circles
-        var circles = svg.selectAll(".TrackName")
+        var circles = svg.selectAll(".TrackName")  // all the tracks from csv file
         .data(datapoints)
-        .enter().append("circle")
-        .attr("class", "artist")
+        .enter().append("circle") 
+        .attr("class", "artist") // adding class to the svg file
         .attr("r",function(d){
             return radiusScale(d.Streams); // scaling them based on their Streams
         })
         .attr("fill",function(d){
-            return "url(#"+d.Position+")"; //setting custom ids 
+            return "url(#"+d.Position+")"; //setting custom ids to apply pattern
         })
         .attr("cx",100)
         .attr("cy",300)
         .on('click', function(d){
 
-            window.open(d.URL);
+            window.open(d.URL); 
         })
         .on('mouseover',function(d, i){
             d.Streams*=2;
@@ -112,7 +112,7 @@
             .attr("r",function(d){
                 return radiusScale(d.Streams); // scaling them based on their Streams
             });
-            // d3.select(this).rotate(30);
+// code for the overlay tool tip for individual hover over the songs
             div.transition()
             .duration(50)
             .style("opacity", 1);
@@ -123,20 +123,16 @@
             var image = new Image();
             image.src = url;
             image.width = 150
-
-            
             div.html("")
-            .style("left", (d3.event.pageX + 10) + "px")
+            .style("left", (d3.event.pageX + 10) + "px") // positioning the div to the mouse cursor 
             .style("top", (d3.event.pageY - 15) + "px");
             var div2 = document.getElementById("ddiv");
+            // using inner html to modify the div's html to make the div dynamic based on the positon of the div
             div2.innerHTML = `<div><div> <img src = ${d.Images} style="width : 150px"> </div><div class="test1" >#${d.Position} ${d.TrackName} </div>
             <div class="test1" >${d.Artist} </div>
-            <div class="test1" >${d.Streams/2} Streams </div>
+            <div class="test1" >${d.Streams/2} Streams </div> 
             </div>`
-            // div2.appendChild(h)
-            // .appendChild(image);
-
-            simulation
+            simulation // increased the size of stream by 2 and called the force again so that it gets bigger on hover
             .force("collide",forceCollide);
         })
         .on('mouseout',function(d,i){
