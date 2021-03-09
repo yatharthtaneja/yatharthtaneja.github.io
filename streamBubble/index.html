@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+     
     <title> StreamBubble</title>
     <link rel = "icon" href =  
     "Assets/Spotify-Logo.png" 
             type = "image/x-icon"> 
 </head>
 <body>
+    <div id="tooltiptext">
+        <p>
+          The size of the bubble corresponds to the number of streams of the song, <br>
+          You can divide the top 30 and 31-100 songs<br>
+          On clicking the song the song is opened in a new tab<br>
+          On hover you get details of the song and the size of the bubble increases
+        
+        </p>
+      </div>
+      <div class="tooltip">
+        <!-- <button id="tt"> i</button> -->
+        <i id="tt" class="fa fa-info-circle fa-2x icon-3d"></i>
+      </div>
     <div class= "header">
         <img src="Assets/SpotifyLogo2.png" id = "logo">
         <h1 class="header-title"> Top 100 </h1>
@@ -31,6 +46,7 @@
             cursor.style.top = e.pageY+ 'px';
         })
     </script>
+    <script src="tooltip.js"> </script>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src= "bubble.js"></script>
 </body>

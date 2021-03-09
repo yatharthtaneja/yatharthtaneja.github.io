@@ -1,4 +1,4 @@
-var targetId = ["home", "project"];
+var targetId = ["home", "projects"];
 if (annyang) {
     var binaryblood = function(target) {
             console.log(target);
@@ -11,6 +11,13 @@ if (annyang) {
                 break;
               }
             }
+          }
+          var abt = function() {
+            // alert('Hello to you too VISITOR');
+            // document.getElementById('hidden-hello').style.display='flex';
+            var msg = new SpeechSynthesisUtterance();
+            msg.text = "Hi,I am Yatharth Taneja, Undergrad Student, currently pursuing BTech in Computer Science and Design from Indraprastha Institute of Information Technology , Delhi.";
+            window.speechSynthesis.speak(msg);
           }
 
     var helloer = function() {
@@ -76,7 +83,7 @@ if (annyang) {
       window.open("https://www.behance.net/gallery/98429045/BOLD-Playing-Cards")
     }
     var streambubble = function() {
-      window.open("https://yatharthtaneja.github.io/spotifyDataVisualisation/")
+      window.open("https://yatharthtaneja.github.io/streamBubble/")
     }
 
    var op3 = function() {
@@ -109,7 +116,9 @@ if (annyang) {
       'see you': bye,
       'roblox': roblox,
       'stream bubble': streambubble,
-      'bold': bold
+      'bold': bold,
+      'tell me about yourself': abt,
+      'who are you': abt
 
 
     };
@@ -125,12 +134,3 @@ if ('speechSynthesis' in window) {
   console.log('Speech recognition not supported 😢');
   // code to handle error
 }
-// var pauseBtn = function() {
-//   annyang.pause(); 
-//   document.getElementById('speechStatus').innerHTML = "MIC has been turned OFF, audio commands not being accepted";
-// }
-
-// var resumeBtn = function() {
-//   annyang.resume();
-//   document.getElementById('speechStatus').innerHTML = "MIC has been turned ON, auido commands are accepted";
-// }
