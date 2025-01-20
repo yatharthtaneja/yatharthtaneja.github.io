@@ -3,6 +3,50 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+}
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+.banner-info {
+
+  text-align: left;
+  /* background-color: #f9f9f9; */
+}
+
+.banner-header {
+  display: flex;
+  justify-content: space-between;
+}
+.banner-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.image-container {
+  padding: 0;
+  margin: 0;
+}
+
+/* gradient CSS code starts here */
 :root {
     --color-bg1: rgb(108, 0, 162);
     --color-bg2: rgb(0, 17, 82);
@@ -61,6 +105,7 @@ body {
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     top: 0;
     left: 0;
+    border-radius: 15px;
   
     svg {
       position: fixed;
