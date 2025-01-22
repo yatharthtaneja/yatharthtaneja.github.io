@@ -7,6 +7,11 @@ body {
 .banner-container {
   width: 100%;
   overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.banner-container:hover {
+  transform: scale(1.05);
 }
 .banner-image {
   width: 100%;
