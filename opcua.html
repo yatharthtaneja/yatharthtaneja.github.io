@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LAgom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body class="container px-3 pt-3">
+
+    <!-- Navbar code  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white d-flex justify-content-between align-items-center"> 
+        <a class="navbar-brand" href="index.html">
+          <!-- <img src="assets/icons/YT-logo.png" height="30" class="d-inline-block align-top" alt="Logo"> -->
+           yatharth taneja 
+        </a>
+      
+        <div class="d-flex align-items-center"> 
+          <ul class="navbar-nav">
+            <li class="nav-item">   
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resume <i class="fas fa-arrow-up-right"></i></a>
+            </li>
+          </ul>
+      
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="assets/icons/linkedin-logo-black.png" width="28" height="28" class="d-inline-block align-top" alt="Icon 1">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="assets/icons/behance-logo-black.png" width="30" height="30" class="d-inline-block align-top" alt="Icon 2">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- Navbar code ends here -->
+
+    <h1 class="pt-5">Industrial IoT Communication Protocol Application</h1>
+    <p> <b> Methods : </b> Market Analysis, Secondary Research, Contextual Inquiry Interviews, Workflow Mapping, Usability Testing Interviews <br> <b> Team :</b> Yatharth Taneja (UX Researcher) , Rakesh V(UX Designer), Shubham S. (Developer), Sree (Developer) , Srijith V. (Development Manager) </p>
+    <p style="color: #FFA500;"><em>To comply with my non-disclosure agreement, I have omitted and obfuscated confidential information in this case study. All information in this case study is my own and does not necessarily reflect the views of MathWorks.</em></p>
+    
+    <p>
+
+    <h2>Executive Summary </h2>
+
+    Our project is structured into two key phases to ensure a user-centric approach and effective product development.
+
+    <br><br><b>Phase 1: Requirements Gathering</b>
+
+    <br>In this phase, we focused on establishing comprehensive requirements by engaging in contextual inquiries with five participants. This involved identifying user roles, goals, workflows, and pain points to create a detailed requirements document. The users, from diverse domains such as the process sector, research and development, and Manufacturing Analytics as a Service, provided insights into developing applications that communicate with DCS/SCADA systems, model-based engineering, and OPC-UA communication protocol integration. 
+
+    <br><br><b>Phase 2: Usability Testing</b>
+
+    <br>Following the requirements gathering, we moved into usability testing of the newly designed application. This phase involved an additional set of five users to evaluate the effectiveness and user-friendliness of the application. The insights gained from this testing were instrumental in refining the product to better meet user expectations and enhance overall usability.
+
+    <br>Together, these phases have positioned us to deliver a robust, user-focused application, with a tentative rollout planned for July 2025.
+        </p>
+
+    <!-- intro -->
+
+    <p>
+    <h2>1. Introduction</h2>
+    <a href="https://www.mathworks.com/help/icomm/index.html?s_tid=CRUX_topnav" target="_blank" style="color: black; text-decoration: underline;">
+    Industrial Communication Toolbox
+    </a> by MathWorks provides access to live and historical industrial plant data directly from MATLAB and Simulink. You can read, write, and log OPC Unified Architecture (UA) data from devices such as distributed control systems, supervisory control and data acquisition systems, and programmable logic controllers. You can also access plant and manufacturing data directly from AVEVA PI System, and use this data for process monitoring, process improvement, and predictive maintenance applications.
+    </p>
+    <div class="image-container">
+        <img src="assets/project-files/opcua/opcua_doc.webp" alt="Full Width Image" class="full-width-image">
+    </div>
+
+    <p> 
+        <br> <h4>1.1 What is OPC UA?</h4>
+
+        OPC Unified Architecture (OPC UA) is an industrial communication standard developed by the 
+        <a href="https://opcfoundation.org/" target="_blank" style="color: black; text-decoration: underline;"> 
+        OPC Foundation </a>
+        . OPC is vendor independent and supports all major industrial automation platforms.
+        
+        OPC UA is a data exchange standard for safe, reliable, manufacturer-independent, and platform-independent industrial communication. It enables secure data exchange between hardware platforms from different vendors and across operating systems.
+        
+        <br> 
+        <br>
+        <h4> 1.2 The challenge </h4>
+        
+        Currently, we support basic APIs for OPC UA usage in MATLAB. With the deprecation of the OPC DA toolbox, we are challenged to innovate and enhance our support for OPC UA, the new industry standard. While third-party solutions exist, our goal is to leverage the MathWorks ecosystem to deliver a unique OPC UA experience by integrating MATLAB's powerful analytics and simulation capabilities. This involves designing a tool that excels in ease-of-use and functionality, and rigorously testing it with users to ensure its effectiveness before development and public release.
+        
+        <br>
+        <br> <h2> 2. Research Questions </h2>
+
+        <table style="width:100%; border-collapse: collapse; border: 1px solid lightgrey;">
+          <thead style="background-color: lightgrey;">
+            <tr>
+              <th style="border-right: 1px solid lightgrey; padding: 10px;">Phase 1</th>
+              <th style="padding: 10px;">Phase 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border-right: 1px solid lightgrey; vertical-align: top; padding: 10px;">
+                <b>User Roles and Goals:</b> What are the roles and goals of the OPC UA client users?<br><br>
+                <b>User Challenges:</b> What frequent obstacles do users encounter, and what alternative solutions or workarounds do they employ?<br><br>
+                <b>User Workflow:</b> What does the current workflow look like for users interacting with OPC UA clients, including activities before and after the main workflow?<br><br>
+                <b>Technical Assessment:</b> What are the technical specifications and performance criteria necessary for the client application?
+              </td>
+              <td style="vertical-align: top; padding: 10px;">
+                <b>Comprehension:</b> How effectively do users understand and navigate the app's interface and functionalities?<br><br>
+                <b>Usefulness:</b> How well does the app meet users' needs to support their workflows effectively?<br><br>
+                <b>Intuitiveness:</b> How naturally and seamlessly do users interact with the app's features and do the interface elements and flows align with their expectations and mental models?<br><br>
+                <b>Affordance:</b> How effectively do the interface elements communicate their functionality and expected outcomes to users?<br><br>
+                <b>Discoverability:</b> How easily can users locate and access the app's key features and functionalities without prior instruction or guidance?
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </p>
+
+    <p>
+        <br> <h2> 3. UX Process and My Contribution </h2>
+
+ As a UX Researcher, I led the research and testing phases of the OPC UA client app project. My responsibilities included:
+
+<br> <br> <h4> 3.1 Phase 1 : Requirements - 6 weeks </h4>
+
+<ul>
+  <li><b>Research Preparation:</b> Developed a comprehensive research plan with clearly defined objectives to guide the initial phase of the project.</li>
+  <li><b>Secondary Research:</b> Conducted an extensive review of existing resources, including OPC conference materials, feature requests, and documented customer workflows. This research provided a foundational understanding of current market offerings and user needs.</li>
+  <li><b>Benchmarking:</b> Analyzed existing OPC UA client solutions available in the market to identify best practices, common features, and potential gaps. This benchmarking exercise informed the development of unique value propositions for our application.</li>
+</ul>
+
+    </p>
+    <figure style="text-align: center;">
+      <img src="assets/project-files/opcua/opcua_miro.webp" alt="Full Width Image" class="full-width-image">
+      <figcaption style="font-style: italic;">Fig: Benchmarking existing OPC UA Client Solution</figcaption>
+    </figure>  
+    
+<ul>
+    <li><b>Contextual Inquiry Preparation:</b> Developed a detailed script for conducting contextual inquiries. </li>
+    <li><b>Conducting User Interviews:</b> Conducted five in-depth user interviews to gather qualitative data on user roles, goals, and workflows. These interviews provided critical insights into user needs and challenges. </li>
+    <li><b>Data Affinitization and Requirements Documentation:</b> Utilized Miro to organize and affinitize the data gathered from interviews, clustering information to identify patterns and themes. This process led to the creation of a comprehensive requirements document, capturing user roles, goals, workflows, and pain points, which served as a foundational reference for the development team. </li>
+</ul>
+
+<figure style="text-align: center;">
+    <img src="assets/project-files/opcua/opcua_miro2.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: Snapshot of insights on miro board</figcaption>
+  </figure>  
+
+  <figure style="text-align: center;">
+    <img src="assets/project-files/opcua/opcua_userrolesandgoals.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: User roles and goals table</figcaption>
+  </figure>  
+  
+  <ul>
+    <li><b> Collaborative Requirements Drafting: </b> Engaged in a team activity with developers to draft and prioritize requirements. This process involved evaluating the severity of identified pain points and considering technical feasibility to ensure a balanced and actionable set of priorities.</li>
+  </ul>
+
+  <figure style="text-align: center;">
+    <img src="assets/project-files/opcua/opcua_requirements.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: User workflow, pain-point and requirements table</figcaption>
+  </figure>  
+
+  <ul>
+    <li><b> Workshop Facilitation:</b> Participated as an expert in a brainstorming workshop aimed at generating potential solutions and identifying areas of intervention. Provided context and insights from the research phase to assist participants, including designers, researchers, and developers, in understanding the problem space and user pain points.</li>
+    <li><b>Design Review Support:</b> Collaborated with the designer to present findings and research-backed decisions during design review forums. This involved explaining the rationale behind certain design choices and ensuring alignment with user needs and project objectives.</li>
+  </ul>
+
+  <h4>3.2 Phase 2 : Usability Testing - 6 weeks</h4>
+  <!-- insert prototype image here -->
+  <ul>
+    <li><b>Research Preparation:</b> Feedback and puzzles from previous (App and Hardware) design reviews were collated, which helped in the formulation of the research questions for the identified app workflow. Over 50 specific research questions were generated, which were then prioritized to identify 20 high-priority questions. These were subsequently themed to develop 5 high-level research questions.</li>
+    <li><b>Research Planning:</b> A detailed research plan was developed, including the creation of tasks and a script to guide the sessions.</li>
+    <li><b>Conducting Interviews:</b> Five interviews were conducted.</li>
+    <li><b>Data Analysis:</b> The session data was analyzed by clustering and categorizing the findings, which were then themed to develop insights in Miro.</li>
+  </ul>
+
+  <figure style="text-align: center;">
+    <img src="assets/project-files/opcua/opcua_miro3.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: Affinitization of data and insights writing</figcaption>
+  </figure>  
+
+  <figure style="text-align: center;">
+    <img src="assets/project-files/opcua/OPC_UA_workflow_painpoints.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: Userflow and identified Painpoints</figcaption>
+  </figure>  
+
+  <ul>
+    <li><b></b>Report Creation:</b> A detailed report was created, which included video clips highlighting the main high-level insights. Additionally, all the findings in the identified workflow, along with a map and feature requests, was captured in the report.</li>
+  </ul>
+
+  <figure style="text-align: center;">
+    <img src="assets/project-files/opcua/opcua_insights.webp" alt="Full Width Image" class="full-width-image">
+    <figcaption style="font-style: italic;">Fig: Insights Table Screenshot</figcaption>
+  </figure>  
+  
+  <ul>
+    <li> <b>Contextual Inquiry:</b> Contextual inquiries were performed on the use cases of OPC UA. These insights were captured in both the report and on Miro.</li>
+  </ul>
+
+  <h4>3.3 Some insights from Usability study</h4>
+  <ul>
+    <li><b>The current user interface terminology can lead to confusion:</b> Users struggle to differentiate between similar concepts such as Configure with adding nodes to the table, "Logging the data" with saving/ recording the data.</li>
+    <li><b>It is difficult to associate the nodes:</b> In the monitoring table and drop down in node information with their corresponding hierarchy in the address space.</li>
+    <li><b>For basic read and write operations:</b> Users do not prefer the node functions panel. However, they expect a safeguard mechanism to prevent erroneous or harmful data modifications.</li>
+    <li><b>To support use cases for monitoring and exploring the nodes:</b> We will need to provide additional functionality, such as unit information, the quality of incoming data, and sampling frequency.</li>
+  </ul>
+
+  <h2>4. Impact</h2>
+  <p>
+    The study enabled us to establish clear requirements at an early stage, significantly reducing the time and iterations typically needed to refine product specifications—potentially saving multiple 6-month release cycles. By focusing on user-centric design, we developed a product that effectively meets user needs, supported by several rounds of internal design reviews and externally validated usability studies. This approach ensured a well-informed, user-driven development process, enhancing the product's relevance and usability from the outset.
+
+    <br> The application is tentatively planned for rollout in July 2025, aligning with our strategic timeline for delivering impactful solutions to our users.
+  </p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
